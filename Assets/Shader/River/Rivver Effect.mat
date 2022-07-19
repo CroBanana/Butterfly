@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Rivver Effect
+  m_Shader: {fileID: -6465566751694194690, guid: 9a8b35be2f980e54ebf37bde3656933d, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FirstTex:
+        m_Texture: {fileID: 2800000, guid: e241e7314e095fb4d9edcc173dac4ab8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FourthTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Image_River:
+        m_Texture: {fileID: 2800000, guid: 2c617a034281fea41bc4e6142bd29028, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_d823f9e1582a4052a80fbbb7010f31ca_Out_0:
+        m_Texture: {fileID: 2800000, guid: e241e7314e095fb4d9edcc173dac4ab8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThirdTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 1
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _Deapth_fade: 3
+    - _Foam_Noise_Scale: 0
+    - _Foam_Ripple_Speed: 0.3
+    - _Metalic: 0
+    - _Noice_Scale: 0.2
+    - _Speed_x: 0
+    - _Speed_y_1: -0.1
+    - _Wather_Foam_Width: 2
+    - _Wather_Height: 2
+    - _Wather_Speed: 2
+    - _Wather_noise_scale: 2
+    - _Wave_Height: 0.5
+    - _Wave_Speed: 3
+    - _Woobfew_FREQ: 2
+    - _Woobgle_speed: 1
+    - _Wooble_distance: 10
+    m_Colors:
+    - _Deep: {r: 0, g: 0.4245996, b: 1, a: 0}
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Shallow: {r: 0.0235849, g: 0.9470288, b: 1, a: 0}
+    - _Tile_Size: {r: 0.005, g: 0.005, b: 0, a: 0}
+    - _Vector3: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &8467965935219161169
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
