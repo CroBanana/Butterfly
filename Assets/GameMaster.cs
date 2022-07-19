@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class GameMaster : MonoBehaviour
@@ -29,7 +30,17 @@ public class GameMaster : MonoBehaviour
 
     public GameObject playButton, continueButton;
 
-    public GameObject uiPlayer, uiMenu;
+    public GameObject uiPlayer, uiMenu, uiOptions;
+
+    [Header("Options")]
+
+    public Slider mouseSpeed;
+    public TextMeshProUGUI mouseSpeedText;
+    public Cam camScript;
+    public TextMeshProUGUI fullscreenButton;
+    public TMPro.TMP_Dropdown resolutionDropdown;
+
+    Resolution[] pcResolution;
 
 
     // Start is called before the first frame update
@@ -42,6 +53,30 @@ public class GameMaster : MonoBehaviour
         shootButterfly.enabled=false;
         continueButton.SetActive(false);
         uiPlayer.SetActive(false);
+        uiOptions.SetActive(false);
+        mouseSpeedText.text=mouseSpeed.value.ToString();
+
+        pcResolution = Screen.resolutions;
+
+        int curentResulutionIndex =0;
+        int i =0;
+        List<string> tempRes = new List<string>();
+        foreach (var res in pcResolution)
+        {
+            
+            tempRes.Add(res.width+" x "+res.height);
+            if(res.width == Screen.currentResolution.width &&
+                res.height == Screen.currentResolution.height)
+            {
+                curentResulutionIndex = i;
+            }
+            i++;
+        }
+
+        resolutionDropdown.ClearOptions();
+        resolutionDropdown.AddOptions(tempRes);
+        resolutionDropdown.value = curentResulutionIndex;
+        resolutionDropdown.RefreshShownValue();
 
         TerrainData data;
         data = terrain.GetComponent<Terrain>().terrainData;
@@ -86,6 +121,7 @@ public class GameMaster : MonoBehaviour
                 shootButterfly.enabled=false;
             }
         }
+
     }
 
     public void PlayButton(){
@@ -143,5 +179,30 @@ public class GameMaster : MonoBehaviour
     void MouseOnMenu(){
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    public void OptionsClick(){
+        uiOptions.SetActive(true);
+        uiMenu.SetActive(false);
+    }
+
+    public void OptionsBack(){
+        uiOptions.SetActive(false);
+        uiMenu.SetActive(true);
+    }
+
+    public void UpdateMouseSpeed(){
+        mouseSpeedText.text=mouseSpeed.value.ToString("F2");
+        camScript.sensitivityX = (int) (mouseSpeed.value *100);
+        camScript.sensitivityY = (int) (mouseSpeed.value *100);
+    }
+
+    public void SetFullscreen(bool isFullscreen){
+        Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetResolution(int resolutionIndex){
+        Resolution res = pcResolution[resolutionIndex];
+        Screen.SetResolution(res.width,res.height, Screen.fullScreen);
     }
 }

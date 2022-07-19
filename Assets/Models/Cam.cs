@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Cam : MonoBehaviour
 {
-    public float sensitivityX;
-    public float sensitivityY;
+    public int sensitivityX;
+    public int sensitivityY;
 
 
     float xRotation;
