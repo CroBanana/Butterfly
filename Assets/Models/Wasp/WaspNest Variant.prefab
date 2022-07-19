@@ -222,15 +222,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a1246a524fe6f449253ca789a2ace9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 197.1
+      value: 134.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a1246a524fe6f449253ca789a2ace9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 122
+      value: 59.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a1246a524fe6f449253ca789a2ace9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 546.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a1246a524fe6f449253ca789a2ace9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -242,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a1246a524fe6f449253ca789a2ace9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0a1246a524fe6f449253ca789a2ace9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -315,6 +315,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   reduceSpeed: 2
   targetHP: 1
+  buffAfterDeath: 75
   waspsInNest: []
   numberOfwaspsMax: 10
   spawnRate: 3

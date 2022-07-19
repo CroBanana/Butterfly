@@ -5061,7 +5061,7 @@ MonoBehaviour:
   refilTime: 15
   bulletPrefab: {fileID: 3885428143617412461, guid: 63f2284862cc301468a2450af62e7847, type: 3}
   butterflyShoot: {fileID: 0}
-  timeBetweenShoots: 0
+  timeBetweenShoots: 0.4
   setCurentBullet: 0
 --- !u!1 &2366922072788373935 stripped
 GameObject:

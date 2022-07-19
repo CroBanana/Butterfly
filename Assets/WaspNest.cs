@@ -13,14 +13,16 @@ public class WaspNest : MonoBehaviour
     public  float reduceSpeed =2;
     public float targetHP=1;
     Color tempColor;
-    
-    
-    
+    public float buffAfterDeath;
+
+
+
     [Header("Spawner"),Space(20)]
     public List<GameObject> waspsInNest = new List<GameObject>();
     public int numberOfwaspsMax;
     public float spawnRate;
     public GameObject wasp;
+
 
 
 
@@ -34,6 +36,7 @@ public class WaspNest : MonoBehaviour
 
     public void StartCorutineSpawning(){
         StartCoroutine(StartSpawning());
+        StartCoroutine(CheckHP());
     }
 
     private void Update() {
@@ -77,6 +80,11 @@ public class WaspNest : MonoBehaviour
 
     public IEnumerator CheckHP(){
         yield return new WaitUntil (()=> hp<0);
+        foreach (var wasp in waspsInNest)
+        {
+            wasp.GetComponent<Wasp>().moveSpeed = buffAfterDeath;
+            wasp.transform.localScale = new Vector3(2,2,2);
+        }
         gameObject.SetActive(false);
     }
 

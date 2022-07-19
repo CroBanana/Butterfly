@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
-  BulletDMG: 2
+  BulletDMG: 7
 --- !u!96 &-1803679283455822681
 TrailRenderer:
   serializedVersion: 2

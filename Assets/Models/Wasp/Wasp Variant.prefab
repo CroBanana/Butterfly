@@ -1348,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5cc1b58dfe3a3f94ebfce2cc84ccaf49, type: 3}
       propertyPath: m_Name
-      value: Wasp
+      value: Wasp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5cc1b58dfe3a3f94ebfce2cc84ccaf49, type: 3}
       propertyPath: m_Layer

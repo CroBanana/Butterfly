@@ -232,7 +232,7 @@ MonoBehaviour:
   BulletDMG: 2
   smallerBulletsCount: 5
   smallerBullet: {fileID: 3885428143617412461, guid: 676954bc82a60824e9fed45c644c924b, type: 3}
-  spreadAngle: 15
+  spreadAngle: 10
   force: 20
 --- !u!135 &2665507393857712472
 SphereCollider:

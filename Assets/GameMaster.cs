@@ -205,4 +205,7 @@ public class GameMaster : MonoBehaviour
         Resolution res = pcResolution[resolutionIndex];
         Screen.SetResolution(res.width,res.height, Screen.fullScreen);
     }
+    public void Quit(){
+        Application.Quit();
+    }
 }

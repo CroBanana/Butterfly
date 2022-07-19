@@ -291,6 +291,7 @@ public class Butterfly : MonoBehaviour
     }
 
     private void WhenDead(){
+        GetComponent<Shoot>().enabled=false;
         anim.enabled=false;
         rig.detectCollisions = false;
         rig.isKinematic = true;

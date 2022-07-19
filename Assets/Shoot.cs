@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Shoot : MonoBehaviour
     public Camera cam; 
     public LayerMask layer;
 
+    public Image reloadImage;
+
     private void Start() {
         cam = Camera.main;
         oldTime=timeBetweenShoots;
@@ -26,9 +29,12 @@ public class Shoot : MonoBehaviour
     private void Update() {
         if(timeBetweenShoots>0){
             timeBetweenShoots-=Time.deltaTime;
+            //Debug.Log(1- (timeBetweenShoots%oldTime));
+            reloadImage.fillAmount= 1- (timeBetweenShoots%oldTime);
             return;
         }
         if(Input.GetKey(KeyCode.Mouse0)){
+            reloadImage.fillAmount=0;
             Fire();
         }
     }
